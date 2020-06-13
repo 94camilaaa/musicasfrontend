@@ -4,4 +4,4 @@ const api = axios.create({
     baseURL: 'https://musicas-backend.herokuapp.com/musicas'
 });
 
-export default api;
+export default api; 
