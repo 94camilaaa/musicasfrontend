@@ -44,7 +44,7 @@ function App() {
         const name = nome;
         const singer = cantor;
         const year = ano;
-        api.post('/musica', { nome: name, singer: cantor, ano: year }).then((response) => {
+        api.post('/musicas', { nome: name, cantor: singer, ano: year}).then((response) => {
         setNome('');
         setCantor('');
         setAno('');
@@ -53,7 +53,7 @@ function App() {
         })
      }
 
-     //Função para marcar uma música como 'Não gosto'
+     //Função para marcar uma música como 'Não gosta'
     function markAsGosta(id, gosta) {
         if(gosta === true){
             api.patch(`/musicas/${id}/naogosta`).then((response) => {
